@@ -47,6 +47,49 @@ const (
 	DNSTypeSRV   DNSType = 33 // server discovery [RFC2782] [RFC6195]
 )
 
+func (dty DNSType) String() string {
+	switch dty {
+		default:
+			return "Unknown"
+		case DNSTypeA:
+			return "A"
+		case DNSTypeNS:
+			return "NS"
+		case DNSTypeMD:
+			return "MD"
+		case DNSTypeMF:
+			return "MF"
+		case DNSTypeCNAME:
+			return "CNAME"
+		case DNSTypeSOA:
+			return "SOA"
+		case DNSTypeMB:
+			return "MB"
+		case DNSTypeMG:
+			return "MG"
+		case DNSTypeMR:
+			return "MR"
+		case DNSTypeNULL:
+			return "NULL"
+		case DNSTypeWKS:
+			return "WKS"
+		case DNSTypePTR:
+			return "PTR"
+		case DNSTypeHINFO:
+			return "HINFO"
+		case DNSTypeMINFO:
+			return "MINFO"
+		case DNSTypeMX:
+			return "MX"
+		case DNSTypeTXT:
+			return "TXT"
+		case DNSTypeAAAA:
+			return "AAAA"
+		case DNSTypeSRV:
+			return "SRV"
+	}
+}
+
 type DNSResponseCode uint8
 
 const (
